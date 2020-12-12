@@ -1,5 +1,5 @@
 //
-//  TestViewController.swift
+//  TestSociologyVC.swift
 //  TestCase2
 //
 //  Created by Муслим Курбанов on 12.12.2020.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TestViewController: UIViewController {
+class TestSociologyVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
