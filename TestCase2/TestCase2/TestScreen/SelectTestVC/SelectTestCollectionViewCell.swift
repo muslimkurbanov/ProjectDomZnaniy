@@ -11,9 +11,13 @@ class SelectTestCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var numberOfTestCell: UILabel!
     @IBOutlet weak var subjectImage: UIImageView!
+    @IBOutlet weak var subjectName: UILabel!
     
-    func configurate(with image: UIImage, title: String) {
+    
+    
+    func configurate(with image: UIImage, testTitle: String, title: String) {
         subjectImage.image = image
-        numberOfTestCell.text = title
+        numberOfTestCell.text = testTitle
+        subjectName.text = title
     }
 }
