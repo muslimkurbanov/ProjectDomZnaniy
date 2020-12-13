@@ -22,13 +22,7 @@ class SelectTestViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewLayout())
-//        collectionView.translatesAutoresizingMaskIntoConstraints = false
-        
-//        NSLayoutConstraint.activate([
-//            collectionView.topAnchor.constraint(equalTo: view.topAnchor)
-//        ])
-//        collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+//       
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
     }

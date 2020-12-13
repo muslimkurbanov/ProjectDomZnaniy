@@ -9,21 +9,40 @@ import UIKit
 
 class MainViewController: UIViewController {
 
+    let math = RatingSettings.mathResults
+    let russian = RatingSettings.russianResults
+    let social = RatingSettings.soicialResults
+    let history = RatingSettings.historyResults
+    
+    var middle: Int = 0
+    
+    @IBOutlet weak var mathLabel: UILabel!
+    @IBOutlet weak var russianLabel: UILabel!
+    @IBOutlet weak var socialLabel: UILabel!
+    @IBOutlet weak var historyLabel: UILabel!
+    
+    @IBOutlet weak var middleLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        mathLabel.text = "Оценка по математике: \(math ?? "")"
+        russianLabel.text = "Оценка по русскому языку: \(russian ?? "")"
+        socialLabel.text = "Оценка по обществознанию: \(russian ?? "")"
+        historyLabel.text = "Оценка по истории: \(history ?? "")"
+        
+//        middle = (Int(UserSettings.mathResults) ?? 0 + Int(UserSettings.russianResults) ?? 0 + Int(UserSettings.socialResults) ?? 0 + Int(UserSettings.historyResults) ?? 0) / 4
+        
+        
+//        middle = ((Int(mathLabel.text ?? "1")! + Int(russianLabel.text ?? "1")! + Int(socialLabel.text ?? "1")! + Int(historyLabel.text ?? "1")!) / 4)
+//        middleLabel.text = "\(middle)"
+        
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func backButton(_ sender: Any) {
+        navigationController?.popToRootViewController(animated: true)
     }
-    */
+    
 
 }

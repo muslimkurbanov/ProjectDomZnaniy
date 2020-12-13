@@ -89,11 +89,14 @@ class TestRussianVC: UIViewController {
             }
             scoreLabel.text = "Ваш результат: \(russianScore)"
             backButton.isHidden = false
+            RatingSettings.russianResults = "\(russianScore)"
         }
     }
    
     @IBAction func backButton(_ sender: Any) {
-        navigationController?.popToRootViewController(animated: true)
+//        navigationController?.popToRootViewController(animated: true)
+        navigationController?.popViewController(animated: true)
+
     }
 
 }

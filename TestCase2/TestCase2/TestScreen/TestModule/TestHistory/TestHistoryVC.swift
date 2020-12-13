@@ -89,11 +89,15 @@ class TestHistoryVC: UIViewController {
             }
             scoreLabel.text = "Ваш результат: \(historyScore)"
             backButton.isHidden = false
+            RatingSettings.historyResults = "\(historyScore)"
         }
     }
     
     @IBAction func backButton(_ sender: Any) {
-        navigationController?.popToRootViewController(animated: true)
-    }
+        
+//        navigationController?.popToRootViewController(animated: true)
+        navigationController?.popViewController(animated: true)
 
+    }
+    
 }

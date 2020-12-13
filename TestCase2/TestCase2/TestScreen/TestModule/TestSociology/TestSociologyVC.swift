@@ -88,10 +88,26 @@ class TestSociologyVC: UIViewController {
             }
             scoreLabel.text = "Ваш результат: \(sociologyScore)"
             backButton.isHidden = false
+            RatingSettings.soicialResults = "\(sociologyScore)"
         }
     }
 
     @IBAction func backButton(_ sender: Any) {
-        navigationController?.popToRootViewController(animated: true)
+        if (RatingSettings.soicialResults != nil), (RatingSettings.historyResults != nil), (RatingSettings.mathResults != nil), RatingSettings.russianResults != "" {
+            let vc = MainViewController()
+//            navigationController?.pushViewController(vc, animated: true)
+            pushToTest()
+        } else {
+//            navigationController?.popToRootViewController(animated: true)
+            navigationController?.popViewController(animated: true)
+        }
+    }
+}
+
+extension TestSociologyVC {
+    func pushToTest() {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let vc = sb.instantiateViewController(identifier: "MainVC")
+        navigationController?.pushViewController(vc, animated: true)
     }
 }

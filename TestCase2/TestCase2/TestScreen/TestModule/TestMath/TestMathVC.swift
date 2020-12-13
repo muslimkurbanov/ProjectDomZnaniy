@@ -74,12 +74,15 @@ class TestMathVC: UIViewController {
             }
             scoreLabel.text = "Ваш результат: \(mathScore)"
             backButton.isHidden = false
+            RatingSettings.mathResults = "\(mathScore)"
         }
         
     }
     
     @IBAction func backButton(_ sender: Any) {
-        navigationController?.popToRootViewController(animated: true)
+//        navigationController?.popToRootViewController(animated: true)
+        navigationController?.popViewController(animated: true)
+
     }
     
 }
